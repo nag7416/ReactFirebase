@@ -1,0 +1,2073 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+em 
+{
+    font-style: italic;
+}
+strong em
+{
+    font-weight: bold;
+}
+a
+{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.descriptiondiv a 
+{
+    color: rgb(0, 128, 255);
+}
+body::-webkit-scrollbar
+{
+    width: 0;
+}
+
+nav 
+{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: dodgerblue;
+}
+nav .inner 
+{
+    width: 95%;
+    max-width: 1300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .inner .left
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+nav .inner .left a  
+{
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 10px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    text-decoration: none;
+    color: white;
+    user-select: none;
+}
+
+
+nav .inner .right 
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+nav .inner .right ul 
+{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+nav .inner .right ul li 
+{
+    margin-left: 25px;
+}
+nav .inner .right ul li a 
+{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+nav .inner .right ul li.active a
+{
+    text-decoration: underline;
+}
+nav .inner .right ul li a:hover 
+{
+    color: black;
+}
+nav .inner .right ul li svg 
+{
+    fill: white;
+}
+nav .inner .right ul .line 
+{
+    width: 1px;
+    height: 25px;
+    background: white;
+    margin-left: 20px;
+}
+
+nav .inner .right .menu
+{
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    display: none;
+}
+nav .inner .right .menu span 
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: .2s;
+}
+nav .inner .right .menu span::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(6px);
+    width: 100%;
+    height: 2.5px;
+    background: white;
+    transition: .2s;
+}
+nav .inner .right .menu span::after
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background: white;
+    transform: translateY(-6px);
+    transition: .2s;
+}
+
+nav .inner .right .menu.active span::before
+{
+    transform: translateY(0px) rotate(45deg);
+    transition: .2s;
+}
+nav .inner .right .menu.active span::after
+{
+    transform: translateY(0px) rotate(-45deg);
+    transition: .2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menubar 
+{
+    position: absolute;
+    color: black;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1000000;
+    background: white;
+    height: 0;
+    overflow: hidden;
+    transition: .2s;
+}
+.menubar.active 
+{
+    height: auto;
+    overflow: visible;
+    transition: .2s;
+}
+.menubar ul 
+{
+    list-style: none;
+}
+.menubar ul li 
+{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+.menubar ul li a 
+{
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+.menubar ul li a:hover 
+{
+    opacity: .8;
+}
+.menubar ul li.active a 
+{
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.banner 
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bannerinner
+{
+    width: 95%;
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bannerinner img 
+{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sec 
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+.sec .secinner 
+{
+    width: 95%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-auto-flow: column;
+}
+
+
+
+.sec .secinner .secleft
+{
+    position: relative;
+    cursor: pointer;
+}
+.sec .secinner .secleft p 
+{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px 12px;
+    background: rgba(0, 0, 0, .9);
+    border-radius: 3px;
+    letter-spacing: .5px;
+    color: white;
+}
+.sec .vignette
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 20%, rgba(0, 0, 0, .85) 80%);
+    z-index: 10;
+}
+.sec .smallvignette
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8vw;
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 57%, rgba(0, 0, 0, .85) 84%);
+    z-index: 10;
+}
+.sec .secinner .secleft img 
+{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.sec .secinner .secleft:hover img 
+{
+    filter: grayscale(1);
+}
+.sec .secinner .secleft .overlay 
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    color: white;
+    z-index: 12;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.sec .secinner .secleft .overlay span 
+{
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 12px;
+    color: white;
+    line-height: 30px;
+    max-height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sec .secinner .secleft .overlay label 
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 2px;
+    background: rgb(255, 255, 255, .1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 8px;
+    color: whitesmoke;
+    letter-spacing: 1px;
+}
+.sec .secinner .secleft .overlay label a
+{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+.sec .secinner .secright
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+}
+.sec .secinner .secright div
+{
+    cursor: pointer;
+}
+.sec .secinner .secright div .overlay 
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 12;
+}
+.sec .secinner .secright div .overlay span 
+{
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    line-height: 22px;
+    max-height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sec .secinner .secright div .overlay span a 
+{
+    color: white;
+}
+.sec .secinner .secright div .overlay label
+{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 2px;
+    background: rgb(255, 255, 255, .1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 9px;
+    font-weight: 700;
+    margin-top: 8px;
+    color: whitesmoke;
+    letter-spacing: .5px;
+}
+.sec .secinner .secright div .overlay label a 
+{
+    color: white;
+}
+.sec .secinner .secright .first 
+{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sec .secinner .secright .first p 
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 12px;
+    background: black;
+    color: white;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.sec .secinner .secright .second 
+{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sec .secinner .secright .first img  
+{
+    width: 100%;
+    max-width: 100%;
+}
+.sec .secinner .secright .second img 
+{
+    width: 100%;
+}
+.sec .secinner .secright div:hover img 
+{
+    filter: grayscale(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.latestsec 
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.latestsec h2 
+{
+    width: 95%;
+    max-width: 1300px;
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 25px;
+}
+.latestsec .inner 
+{
+    width: 95%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin-top: 20px;
+}
+.latestsec .inner .post 
+{
+    width: 100%;
+}
+
+.latestsec .inner .post .postimg img 
+{
+    width: 100%;
+}
+.latestsec .inner .post .postimg:hover img 
+{
+    filter: grayscale(1);
+}
+.latestsec .inner .post .postdetails 
+{
+    padding-top: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.latestsec .inner .post .postdetails h4 
+{
+    color: black;
+    font-size: 20px;
+    max-height: 25px;
+    overflow: hidden;
+    font-weight: 700;
+    line-height: 26px;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+}
+.latestsec .inner .post .postdetails h4 a 
+{
+    color: black;
+    font-weight: 700;
+}
+.latestsec .inner .post .postdetails label 
+{
+    font-size: 15px;
+    max-height: 23px;
+    overflow: hidden;
+}
+.latestsec .inner .post .postdetails div 
+{
+    margin-top: 5px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.latestsec .inner .post .postdetails div p
+{
+    margin-right: 5px;
+    font-size: 14px;
+}
+.latestsec .inner .post .postdetails div p:last-child
+{
+    margin-left: 10px;
+    position: relative;
+}
+.latestsec .inner .post .postdetails div p:last-child::before
+{
+    content: '.';
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-12px);
+}
+.latestsec .inner .post .postdetails div p a
+{
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.exclusive 
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.exclusive h2 
+{
+    width: 95%;
+    max-width: 1300px;
+    margin-top: 25px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: normal;
+}
+.exclusiveinner 
+{
+    width: 95%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 25px;
+}
+.exclusiveinner .exleft
+{
+    width: calc(100% / 1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+
+.exclusiveinner .exleft .item
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.exclusiveinner .exleft .item .itemimg img
+{
+    height: 170px;
+}
+.exclusiveinner .exleft .item .itemimg:hover 
+{
+    filter: grayscale(1);
+}
+.exclusiveinner .exleft .item .itemdetail 
+{
+    margin-left: 20px;
+}
+.exclusiveinner .exleft .item .itemdetail h4 
+{
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+.exclusiveinner .exleft .item .itemdetail h4 a 
+{
+    color: black;
+    font-weight: 600;
+}
+.exclusiveinner .exleft .item .itemdetail p 
+{
+    font-size: 14px;
+    max-height: 60px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+.exclusiveinner .exleft .item .itemdetail div
+{
+    display: flex;
+    align-items: center;
+}
+.exclusiveinner .exleft .item .itemdetail div span
+{
+    display: flex;
+    align-items: center;
+}
+.exclusiveinner .exleft .item .itemdetail div span 
+{
+    font-size: 13px;
+}
+.exclusiveinner .exleft .item .itemdetail div span a 
+{
+    color: black;
+}
+.exclusiveinner .exleft .item .itemdetail div span:last-child
+{
+    position: relative;
+    margin-left: 20px;
+}
+.exclusiveinner .exleft .item .itemdetail div span:last-child::before
+{
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: -10px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: black;
+}
+
+
+
+
+
+
+
+
+
+.exclusiveinner .exright 
+{
+    width: calc(100% / 2);
+    position: sticky;
+    top: 0;
+    padding-left: 20px;
+}
+
+.exclusiveinner .exright .exrightinner 
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.exclusiveinner .exright .exrightinner .erow
+{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+.exclusiveinner .exright .exrightinner .erow .eleft 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: dodgerblue;
+    border-radius: 50%;
+    color: white;
+    margin-right: 10px;
+}
+.exclusiveinner .exright .exrightinner .erow .eright .edetail  
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.exclusiveinner .exright .exrightinner .erow .eright .edetail h3 
+{
+    font-size: 22px;
+    font-weight: 600;
+}
+.exclusiveinner .exright .exrightinner .erow .eright .edetail div 
+{
+    display: flex;
+    align-items: center;
+}
+.exclusiveinner .exright .exrightinner .erow .eright .edetail div span
+{
+    font-size: 14px;
+    position: relative;
+}
+.exclusiveinner .exright .exrightinner .erow .eright .edetail div span:last-child
+{
+    margin-left: 20px;
+}
+.exclusiveinner .exright .exrightinner .erow .eright .edetail div span a 
+{
+    color: black;
+}
+.exclusiveinner .exright .exrightinner .erow .eright .edetail div span:last-child::before
+{
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: -10px;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer 
+{
+    width: 100%;
+    background: black;
+    padding: 65px 0;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer .inner 
+{
+    width: 95%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    color: white;
+    grid-gap: 25px;
+    border-bottom: .5px solid rgb(65, 65, 65);
+    padding-bottom: 30px;
+}
+
+footer .inner .one .logo h2
+{
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+footer .inner .one p 
+{
+    color: white;
+    letter-spacing: .5px;
+    font-weight: 400;
+}
+
+footer .inner .box ul
+{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+footer .inner .box ul li
+{
+    margin-bottom: 10px;
+}
+footer .inner .box ul li span
+{
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+}
+footer .inner .box ul li a 
+{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+footer .inner .box ul li a:hover 
+{
+    opacity: .8;
+}
+
+
+
+
+footer .copyrightnote
+{
+    width: 95%;
+    max-width: 1300px;
+    color: white;
+    padding-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.anotherinner 
+{
+    margin-top: 30px;
+    width: 95%;
+    max-width: 1300px;
+    height: 50vw;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+}
+
+.anotherinner .one 
+{
+    grid-area: 1 / 1 / 6 / 3;
+    background-image: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, 0)), url('https://assets-global.website-files.com/65a67591306205532b2fe335/65a67e5de932054adfe6462f_pexels-cottonbro-studio-6567818-1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.anotherinner .one .details 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.anotherinner .one .details h3
+{
+    font-size: 28px;
+    color: white;
+    margin-left: 20px;
+    margin-top: 25px;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+.anotherinner img 
+{
+    width: 100%;
+}
+.anotherinner .two 
+{ 
+    grid-area: 1 / 3 / 3 / 5; 
+    background-image: url('https://assets-global.website-files.com/65a67591306205532b2fe335/65a67e57646c4ad5d1e2eee0_pexels-andrea-piacquadio-3782206-1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.anotherinner .three 
+{ 
+    grid-area: 1 / 5 / 3 / 7; 
+    background-image: url('https://assets-global.website-files.com/65a67591306205532b2fe335/65b27c5a0028741cff1050df_ali-morshedlou-WMD64tMfc4k-unsplash-1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.anotherinner .four 
+{ 
+    grid-area: 3 / 3 / 5 / 7; 
+    background-image: url('https://assets-global.website-files.com/65a67591306205532b2fe335/65b27e3fb4195d527b7bc8f3_brooke-cagle-86YOjoT3hi4-unsplash-1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.detailsec 
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.detailsec .detailsecinner 
+{
+    width: 95%;
+    max-width: 1300px;
+    display: flex;
+    align-items: flex-start;
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 0px; */
+    padding-top: 30px;
+    margin-bottom: 90px;
+}
+.detailsec .detailsecinner .detailleft
+{
+    /* grid-area: 1 / 1 / 3 / 3; */
+    width: calc(100% / 1);
+    padding-right: 30px;
+}
+.detailsec .detailsecinner .detailleft .datediv 
+{
+    display: flex;
+    align-items: center;
+}
+.detailsec .detailsecinner .detailleft .datediv label 
+{
+    font-size: 14px;
+}
+.detailsec .detailsecinner .detailleft .datediv label:last-child
+{
+    position: relative;
+    margin-left: 20px;
+}
+.detailsec .detailsecinner .detailleft .datediv label:last-child::before
+{
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: -10px;
+    width: 2px;
+    height: 2px;
+    background: black;
+    border-radius: 50%;
+}
+.detailsec .detailsecinner .detailleft .datediv label a 
+{
+    color: black;
+}
+.detailsec .detailsecinner .detailleft .titlediv 
+{
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.detailsec .detailsecinner .detailleft .titlediv h2
+{
+    width: 98%;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.detailsec .detailsecinner .detailleft .imagediv 
+{
+    width: 100%;
+}
+
+.detailsec .detailsecinner .detailleft .imagediv img 
+{
+    width: 100%;
+}
+.detailsec .detailsecinner .detailleft .sharediv
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.detailsec .detailsecinner .detailleft .sharediv button
+{
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    background: whitesmoke;
+    transition: .3s;
+}
+.detailsec .detailsecinner .detailleft .sharediv button:hover 
+{
+    background: rgb(227, 227, 227);
+    transition: .3s;
+}
+.detailsec .detailsecinner .detailleft .sharediv button svg 
+{
+    margin-right: 5px;
+    width: 24px;
+    height: 24px;
+}
+
+.detailsec .detailsecinner .detailleft .descriptiondiv
+{
+    margin-top: 20px;
+    width: 100%;
+}
+.detailsec .detailsecinner .detailleft .descriptiondiv h1, h2, h3, h4, h5, h6
+{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.detailsec .detailsecinner .detailleft .descriptiondiv p, label, span 
+{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+
+
+.detailsec .detailsecinner .detailright
+{
+    width: calc(100% / 2);
+    /* grid-area: 1 / 3 / 3 / 4; */
+    position: sticky;
+    top: 0;
+}
+.detailsec .detailsecinner .detailright .detailrightinner 
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+.detailsec .detailsecinner .detailright .detailrightinner h2 
+{
+    font-size: 28px;
+}
+.detailsec .detailsecinner .detailright .detailrightinner .lateststories
+{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.detailsec .detailsecinner .detailright .detailrightinner .lateststories .story 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+.detailsec .detailsecinner .detailright .detailrightinner .lateststories .story h3 
+{
+    font-size: 22px;
+}
+.detailsec .detailsecinner .detailright .detailrightinner .lateststories .story div label 
+{
+    font-size: 14px;
+}
+.detailsec .detailsecinner .detailright .detailrightinner .lateststories .story div label:last-child
+{
+    position: relative;
+    margin-left: 20px;
+}
+.detailsec .detailsecinner .detailright .detailrightinner .lateststories .story div label:last-child::before
+{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: black;
+    border-radius: 50%;
+    left: -13px;
+    top: 8px;
+}
+.detailsec .detailsecinner .detailright .detailrightinner .lateststories .story div label a 
+{
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.detailsec .detailsecinner .contactleft
+{
+    width: calc(100% / 1);
+    /* padding-right: 30px; */
+}
+.detailsec .detailsecinner .contactleft .contactinner 
+{
+    padding-right: 0;
+    padding-right: 30px;
+}
+.detailsec .detailsecinner .contactleft .contactinner form 
+{
+    width: 100%;
+}
+.detailsec .detailsecinner .contactleft .contactinner form .namebox, .email  
+{
+    margin-bottom: 45px;
+    width: 100%;
+    height: 35px;
+    background: red;
+    border-bottom: .5px solid rgb(211, 211, 211);
+}
+.detailsec .detailsecinner .contactleft .contactinner form .messagebox  
+{
+    border: .5px solid rgb(211, 211, 211);
+}
+.detailsec .detailsecinner .contactleft .contactinner form div input 
+{
+    height: 100%;
+    padding-left: 10px;
+    width: calc(100% - 10px);
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.detailsec .detailsecinner .contactleft .contactinner form div textarea
+{
+    padding-left: 10px;
+    resize: none;
+    outline: none;
+    border: none;
+    width: calc(100% - 10px);
+    min-height: 100px;
+    font-size: 16px;
+    padding-top: 10px;
+}
+.detailsec .detailsecinner .contactleft .contactinner form button
+{
+    margin-top: 45px;
+    padding: 10px 40px;
+    border: none;
+    outline: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    letter-spacing: .5px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+.detailsec .detailsecinner .contactleft .contactinner form button:hover 
+{
+    opacity: .9;
+}
+.detailsec .detailsecinner .contactright
+{
+    width: calc(100% / 2);
+    padding-right: 30px;
+}
+.detailsec .detailsecinner .contactright .contactrightinner 
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+.detailsec .detailsecinner .contactright .contactrightinner div 
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.detailsec .detailsecinner .contactright .contactrightinner div img 
+{
+    width: 30px;
+    height: 30px;
+}
+.detailsec .detailsecinner .contactright .contactrightinner div a 
+{
+    color: black;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+.successmessage
+{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    z-index: 9999;
+    animation: slideIn 0.5s forwards, slideOut 0.5s forwards 2.5s; /* Slide in and out animations */
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sec .secinner .loginbox 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.sec .secinner .loginbox form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sec .secinner .loginbox form h2
+{
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+.sec .secinner .loginbox form input
+{
+    padding: 8px 0;
+    width: 300px;
+    margin-bottom: 30px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    border-bottom: .5px solid rgb(177, 177, 177);
+}
+
+.sec .secinner .loginbox form button
+{
+    width: 300px;
+    padding: 11px 0;
+    margin-top: 10px;
+    cursor: pointer;
+    background: black;
+    color: white;
+    border: none;
+}
+.sec .secinner .loginbox form button:hover 
+{
+    opacity: .9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.comments
+{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.comments .usercomment
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.comments .usercomment .usercomimg 
+{
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
+    overflow: hidden;
+    background: whitesmoke;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.comments .usercomment .usercomimg img 
+{
+    width: 100%;
+    height: 100%;
+}
+.comments .usercomment .usercomdetail 
+{
+    width: calc(100% - 45px);
+    border-radius: 20px;
+    overflow: hidden;
+    background: lightgray;
+}
+.comments .usercomment .usercomdetail form 
+{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+.comments .usercomment .usercomdetail form input 
+{
+    padding: 8px 12px;
+    width: calc(100% - 24px);
+    outline: none;
+    border: none;
+    background: rgb(234, 234, 234);
+}
+
+
+
+
+
+
+.comments .publiccomments 
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+.publiccomments .publiccomment
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+.publiccomments .publiccomment .publiccomimg 
+{
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.publiccomments .publiccomment .publiccomimg img 
+{
+    width: 100%;
+    height: 100%;
+}
+.publiccomments .publiccomment .publiccomdetail
+{
+    width: calc(100% - 45px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.publiccomments .publiccomment .publiccomdetail .top 
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.publiccomments .publiccomment .publiccomdetail .top button
+{
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.publiccomments .publiccomment .publiccomdetail .top div label 
+{
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 18px;
+    color: rgb(15, 15, 15);
+}
+.publiccomments .publiccomment .publiccomdetail .top label a 
+{
+    color: black;
+}
+.publiccomments .publiccomment .publiccomdetail .top span 
+{
+    margin-left: 12px;
+    font-size: 13.5px;
+    margin-top: -1px;
+    position: relative;
+}
+.publiccomments .publiccomment .publiccomdetail .top span::before
+{
+    content: '.';
+    position: absolute;
+    top: -6px;
+    left: -8px;
+    width: 2px;
+}
+.publiccomments .publiccomment .publiccomdetail .bottom
+{
+    margin-top: 3px;
+}
+.publiccomments .publiccomment .publiccomdetail .bottom p 
+{
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+  
+
+
+
+
+
+@media screen and (max-width: 700px){
+    .detailsec .detailsecinner
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .detailsec .detailsecinner .contactright
+    {
+        padding: 20px 0;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+.searchcon 
+{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchcon .searchinner 
+{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchcon .searchinner .searchbox
+{
+    width: 60%;
+    height: 35px;
+    min-width: 480px;
+}
+.searchcon .searchinner .searchbox form
+{
+    width: 100%;
+    height: 100%;
+}
+.searchcon .searchinner .searchbox input
+{
+    width: calc(100% - 20px);
+    padding: 0 10px;
+    height: 100%;
+    border: .5px solid rgb(187, 187, 187);
+    outline: none;
+    border-radius: 4px;
+}
+
+
+
+
+
+@media screen and (max-width: 880px){
+    nav .inner .right .menu
+    {
+        display: flex;
+    }
+    nav .inner .right ul
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .sec .secinner
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .sec .secinner .secleft
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: auto;
+    }
+    .sec .secinner .secleft img
+    {
+        width: 100%;
+        position: relative;
+    }
+    .sec .secinner .secright div .overlay span
+    {
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 30px;
+        max-height: 60px;
+        overflow: hidden;
+    }
+    .sec .secinner .secright div .overlay label 
+    {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 10px;
+    }
+}
+
+
+@media screen and (max-width: 1150px){
+    .exclusiveinner
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .exclusiveinner .exright .exrightinner
+    {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 30px;
+    }
+    .exclusiveinner .exright .exrightinner .erow
+    {
+        min-width: 200px;
+        margin-right: 15px;
+    }
+    .exclusiveinner .exright
+    {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 548px){
+    .exclusiveinner
+    {
+        align-items: center;
+    }
+    .exclusiveinner .exleft .item
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .exclusiveinner .exleft .item .itemimg 
+    {
+        width: 100%;
+    }
+    .exclusiveinner .exleft .item .itemimg a 
+    {
+        width: 100%;
+    }
+    .exclusiveinner .exleft .item .itemimg a img  
+    {
+        width: 100%;
+    }
+    .exclusiveinner .exleft .item .itemdetail
+    {
+        margin-left: 0;
+    }
+    .exclusiveinner .exright .exrightinner
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .exclusiveinner .exright .exrightinner .erow
+    {
+        min-width: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.latestsec .lateinner 
+{
+    width: 95%;
+    max-width: 1300px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+.latestsec .lateinner .lateleft 
+{
+    width: calc(100% / 1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.latestsec .lateinner .lateleft .profileinner
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 10px;
+}
+.latestsec .lateinner .lateleft .profileinner form 
+{
+    width: 100%;
+}
+.latestsec .lateinner .lateleft .profileinner .profilerow 
+{
+    margin: 15px 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+.latestsec .lateinner .lateleft .profileinner .profilerow .box 
+{
+    width: calc(100% / 2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.latestsec .lateinner .lateleft .profileinner .profilerow .box label
+{
+    font-size: 14px;
+}
+.latestsec .lateinner .lateleft .profileinner .profilerow .box input
+{
+    width: calc(100% - 20px);
+    height: 28px;
+    padding-left: 10px;
+    border: none;
+    border: .5px solid rgb(179, 179, 179);
+    outline: none;
+}
+.latestsec .lateinner .lateleft .profileinner .profilerow .box button
+{
+    width: 100px;
+    height: 38px;
+    border: none;
+    background: dodgerblue;
+    color: white;
+    border-radius: 2px;
+}
+.latestsec .lateinner .lateleft .profileinner .profilerow .box button:hover 
+{
+    opacity: .9;
+    cursor: pointer;
+}
+
+.latestsec .lateinner .lateright 
+{
+    width: calc(100% / 2);
+}
+.latestsec .lateinner .lateright .laterightinner
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.latestsec .lateinner .lateright .laterightinner .imgbox
+{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+.latestsec .lateinner .lateright .laterightinner .imgbox img 
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+.linkpopup
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+.linkpopup.active 
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.linkpopup .popupbox 
+{
+    width: 480px;
+    height: auto;
+    background: white;
+    border-radius: 3px;
+}
+.linkpopup .popupbox .top 
+{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: .5px solid rgb(221, 219, 219);
+}
+.linkpopup .popupbox .top label 
+{
+    margin-left: 10px;
+    user-select: none;
+}
+.linkpopup .popupbox .top button
+{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+.linkpopup .popupbox .middle 
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.linkpopup .popupbox .middle input
+{
+    width: calc(100% - 110px);
+    resize: none;
+    border: .5px solid rgb(163, 163, 163);
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 20px;
+    pointer-events: visiblePainted;
+}
+.linkpopup .popupbox .middle button
+{
+    padding: 8px 15px;
+    background: dodgerblue;
+    border-radius: 20px;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.linkpopup .popupbox .bottom
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.linkpopup .popupbox .bottom iframe
+{
+    width: 100%;
+    height: 300px;
+    transform: scale(1);
+    pointer-events: none;
+}
+.linkpopup .popupbox .bottom button
+{
+    padding: 8px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 2px;
+    color: white;
+}
